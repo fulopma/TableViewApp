@@ -16,37 +16,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3uQ-4R-3nD">
-                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
-                                <subviews>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="c00-ez-VDx">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c00-ez-VDx" id="0wF-eP-75g">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3jc-B4-ajV">
+                                <rect key="frame" x="0.0" y="198" width="393" height="586"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="colorCell" id="fJc-a8-Jm4">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fJc-a8-Jm4" id="uZO-ek-SQX">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </tableViewCell>
-                                </subviews>
-                            </stackView>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YO3-sc-q8Y">
+                                <rect key="frame" x="121.66666666666669" y="100" width="150" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="8fI-qx-QZU"/>
+                                    <constraint firstAttribute="width" constant="150" id="rRR-cE-sQf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Product View"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3uQ-4R-3nD" secondAttribute="bottom" id="5b1-OI-nxz"/>
-                            <constraint firstItem="3uQ-4R-3nD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DeD-K6-4Xf"/>
-                            <constraint firstItem="3uQ-4R-3nD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c1X-nh-k6u"/>
-                            <constraint firstItem="3uQ-4R-3nD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u0m-c8-Ddd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3jc-B4-ajV" secondAttribute="bottom" id="26m-Sf-o72"/>
+                            <constraint firstItem="YO3-sc-q8Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ww-cK-47n"/>
+                            <constraint firstItem="3jc-B4-ajV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="63W-eF-f5X"/>
+                            <constraint firstItem="YO3-sc-q8Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="Cgw-ci-EFF"/>
+                            <constraint firstItem="3jc-B4-ajV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="KoN-bf-GwJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3jc-B4-ajV" secondAttribute="trailing" id="bZW-M4-EU2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ColorTable" destination="3jc-B4-ajV" id="Q6Q-di-Cjj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XsV-5c-hvE">
+            <objects>
+                <viewController id="MBA-qn-L6L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ugu-M1-e1H">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vkp-u1-5J5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVZ-cs-KQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
