@@ -42,7 +42,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Product View"/>
                                 <connections>
-                                    <segue destination="MBA-qn-L6L" kind="show" id="7Jh-Hn-mfg"/>
+                                    <segue destination="MBA-qn-L6L" kind="show" id="J0U-KR-fTe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Product View Controller-->
         <scene sceneID="XsV-5c-hvE">
             <objects>
-                <viewController id="MBA-qn-L6L" sceneMemberID="viewController">
+                <viewController id="MBA-qn-L6L" customClass="ProductViewController" customModule="StackViewerProduct" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugu-M1-e1H">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,17 +77,17 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="productCell" rowHeight="110" id="TkS-We-5zC" customClass="ProductTableCell" customModule="StackViewerProduct" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="productCell" id="TkS-We-5zC" customClass="ProductTableCell" customModule="StackViewerProduct" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="110.33333587646484"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TkS-We-5zC" id="aWv-lG-k3u">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="110.33333587646484"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-kk-cnx">
-                                                    <rect key="frame" x="110" y="10" width="150" height="20"/>
+                                                    <rect key="frame" x="110" y="10" width="250" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="Pi2-CS-l8i"/>
+                                                        <constraint firstAttribute="width" constant="250" id="Pi2-CS-l8i"/>
                                                         <constraint firstAttribute="height" constant="20" id="jO6-SN-zla"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -95,7 +95,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c9-zu-xM0">
-                                                    <rect key="frame" x="110" y="60" width="150" height="30"/>
+                                                    <rect key="frame" x="110" y="51.333333333333343" width="150" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="1aJ-Su-6Go"/>
                                                         <constraint firstAttribute="width" constant="150" id="rDv-GM-4hJ"/>
@@ -105,17 +105,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENT-q1-d6w">
-                                                    <rect key="frame" x="10" y="10" width="90" height="90"/>
+                                                    <rect key="frame" x="10" y="10" width="90" height="90.333333333333329"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="5Xs-ZD-Jxt"/>
                                                         <constraint firstAttribute="width" constant="90" id="m29-nK-tZB"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ENT-q1-d6w" secondAttribute="bottom" constant="10" id="EtZ-v2-taQ"/>
-                                                <constraint firstItem="5c9-zu-xM0" firstAttribute="top" secondItem="bFb-kk-cnx" secondAttribute="bottom" constant="30" id="F75-J0-auk"/>
                                                 <constraint firstItem="ENT-q1-d6w" firstAttribute="leading" secondItem="aWv-lG-k3u" secondAttribute="leading" constant="10" id="G1P-xP-tb9"/>
                                                 <constraint firstItem="bFb-kk-cnx" firstAttribute="top" secondItem="aWv-lG-k3u" secondAttribute="top" constant="10" id="WGI-KM-6bf"/>
+                                                <constraint firstAttribute="bottom" secondItem="5c9-zu-xM0" secondAttribute="bottom" constant="29" id="blO-3M-rwJ"/>
                                                 <constraint firstItem="ENT-q1-d6w" firstAttribute="top" secondItem="aWv-lG-k3u" secondAttribute="top" constant="10" id="lKR-re-PHH"/>
                                                 <constraint firstItem="bFb-kk-cnx" firstAttribute="leading" secondItem="ENT-q1-d6w" secondAttribute="trailing" constant="10" id="na9-jB-UvX"/>
                                                 <constraint firstItem="5c9-zu-xM0" firstAttribute="leading" secondItem="ENT-q1-d6w" secondAttribute="trailing" constant="10" id="y7Q-nB-SUQ"/>
@@ -140,6 +142,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BD0-w2-s5f"/>
+                    <connections>
+                        <outlet property="productTable" destination="JFA-T0-MCA" id="xbi-rT-dYA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVZ-cs-KQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
