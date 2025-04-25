@@ -40,4 +40,6 @@ processFile(reader: csvReader, filename: "example.csv")
 ///    the View Controller to implement the same protocol as Table View. Now the view controller now
 ///    must conform to the protocol which are those mandatory methods.
 ///  5. What is the advantage of using dequeue reusable cell with identifier?
-///    The advantage of using dequeue reusable
+///    The advantage of using dequeue reusable is that allows you to insert place one prototype cell in the
+///    the storyboard and create a class that define the features of the cell. It allows you to programmatically
+///    insert all the cells in the table.

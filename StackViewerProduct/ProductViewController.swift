@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Product{
+struct Product{
     var name: String
     var price: String
     // Image is a color but stored as a raw string
@@ -36,7 +36,7 @@ class ProductViewController: UIViewController, UITableViewDataSource
         Product(name: "Pants", price: "$44.99", image: "black")
     ]
     
-    // converts a string value to a UIColor 
+    // converts a string value to a UIColor
     let stringToUIColor: [String: UIColor] = [
         "red": .red,
         "green": .green,
