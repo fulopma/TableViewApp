@@ -28,6 +28,7 @@ class CsvReader: Reader{
     }
 }
 func processFile(reader: Reader, filename: String) -> String{
+    reader.readFile(filename: filename)
     return ""
 }
 var jsonReader: Reader = JsonReader()
@@ -42,4 +43,4 @@ processFile(reader: csvReader, filename: "example.csv")
 ///  5. What is the advantage of using dequeue reusable cell with identifier?
 ///    The advantage of using dequeue reusable is that allows you to insert place one prototype cell in the
 ///    the storyboard and create a class that defines the features of the cell. It allows you to programmatically
-///    insert all the cells in the table by copying and adjusting the prototype reusable cell. 
+///    insert all the cells in the table by copying and adjusting the prototype reusable cell.
